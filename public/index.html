@@ -42,7 +42,10 @@
 </head>
 <body class="text-gray-800">
 
-    <!-- Modal de Confirmação de Exclusão -->
+    <div id="ad-container" style="position: fixed; bottom: 0; left: 0; width: 100%; z-index: 9999; text-align: center; background-color: rgba(249, 250, 251, 0.9); padding: 5px; box-shadow: 0 -2px 5px rgba(0,0,0,0.1);">
+        <script src="https://fpyf8.com/88/tag.min.js" data-zone="166302" async data-cfasync="false"></script>
+        <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',9774199,document.createElement('script'))</script>
+    </div>
     <div id="delete-confirm-modal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-sm p-6 text-center">
             <h2 class="text-xl font-bold mb-4">Confirmar Exclusão</h2>
@@ -54,14 +57,12 @@
         </div>
     </div>
 
-    <!-- Modal de Autenticação (Login/Cadastro) -->
     <div id="auth-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-md p-6 relative">
             <button onclick="toggleAuthModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
                 <i class="fas fa-times fa-lg"></i>
             </button>
             
-            <!-- Abas -->
             <div class="border-b border-gray-200 mb-4">
                 <nav class="-mb-px flex space-x-8" aria-label="Tabs">
                     <a href="#" id="login-tab" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-green-500 text-green-600">Entrar</a>
@@ -69,7 +70,6 @@
                 </nav>
             </div>
 
-            <!-- Formulário de Login -->
             <div id="login-form-container">
                 <h2 class="text-2xl font-bold mb-4 text-center">Acessar Conta</h2>
                 <form id="login-form">
@@ -85,7 +85,6 @@
                 </form>
             </div>
 
-            <!-- Formulário de Cadastro -->
             <div id="register-form-container" class="hidden">
                 <h2 class="text-2xl font-bold mb-4 text-center">Criar Conta</h2>
                 <form id="register-form">
@@ -117,7 +116,6 @@
         </div>
     </div>
 
-    <!-- Modal de Envio de Grupo -->
     <div id="submissionModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-lg shadow-xl w-full max-w-md p-6 relative">
             <button onclick="toggleSubmissionModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
@@ -191,7 +189,6 @@
         </div>
     </div>
 
-    <!-- Cabeçalho -->
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
             <a href="/" class="flex-shrink-0">
@@ -217,7 +214,6 @@
                         <span id="username-display" class="font-semibold"></span>
                         <i class="fas fa-chevron-down text-xs"></i>
                     </button>
-                    <!-- Dropdown menu -->
                     <div id="user-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
                         <button id="logout-button" class="w-full text-left px-4 py-2 text-sm text-white bg-red-800 hover:bg-red-900">Sair</button>
                     </div>
@@ -226,7 +222,6 @@
         </div>
     </header>
 
-    <!-- Conteúdo Principal -->
     <div id="main-view">
         <main class="container mx-auto p-4 mt-6">
             <div class="flex flex-col lg:flex-row gap-8">
@@ -234,19 +229,16 @@
                     <section>
                         <h2 class="text-2xl font-bold mb-4 border-l-4 border-green-500 pl-3">Grupos em destaque</h2>
                         <div id="featured-groups-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
-                            <!-- Grupos em destaque serão inseridos aqui pelo JS -->
-                        </div>
+                            </div>
                     </section>
 
                     <section class="mt-10">
                         <h2 class="text-2xl font-bold mb-4 border-l-4 border-green-500 pl-3">Todos os Grupos</h2>
                         <div id="main-groups-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                            <!-- Grupos serão inseridos aqui pelo JS -->
-                        </div>
+                            </div>
                     </section>
                 </div>
 
-                <!-- Barra Lateral -->
                 <aside class="w-full lg:w-1/4">
                     <div class="rounded-lg shadow-lg overflow-hidden w-1/2 mx-auto">
                         <img src="https://i.ibb.co/JWGpfh7X/unnamed-1.png" alt="Denuncie Pedofilia - Disque 100 ou 181" class="w-full h-auto">
@@ -256,7 +248,6 @@
         </main>
     </div>
 
-    <!-- Página de Detalhes -->
     <div id="details-view" class="container mx-auto p-4 mt-6">
         <button onclick="window.showMainPage()" class="mb-6 bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg text-sm hover:bg-gray-300">
             <i class="fas fa-arrow-left mr-2"></i> Voltar para a lista
@@ -264,26 +255,22 @@
         <div class="bg-white p-6 rounded-lg shadow-lg">
             <h1 id="details-title" class="text-3xl lg:text-4xl font-bold text-center mb-2"></h1>
             <div id="details-meta" class="text-center text-sm text-gray-500 mb-6 space-x-4">
-                <!-- Meta info will be injected here -->
-            </div>
+                </div>
             <div class="max-w-3xl mx-auto">
                 <p id="details-rules" class="text-gray-700 whitespace-pre-wrap mb-6 p-4 border rounded-md bg-gray-50"></p>
                 <a id="details-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full block text-center btn-green font-bold py-4 px-4 rounded-lg transition duration-300 text-xl">
                     ENTRAR NO GRUPO
                 </a>
                 <div id="details-category-container" class="mt-6 text-center">
-                    <!-- Category link will be injected here -->
-                </div>
+                    </div>
             </div>
         </div>
     </div>
     
-    <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-5 right-5 bg-gray-800 text-white py-2 px-4 rounded-lg shadow-lg transition-opacity duration-300 opacity-0">
         <p id="toast-message"></p>
     </div>
 
-    <!-- Firebase SDKs -->
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
@@ -759,5 +746,22 @@
         });
 
     </script>
-</body>
+
+    <script>
+        const adContainer = document.getElementById('ad-container');
+
+        if (adContainer) {
+            // A função é acionada por um clique dentro do contêiner de anúncios.
+            adContainer.addEventListener('click', () => {
+                // Esconde o contêiner de anúncios.
+                adContainer.style.display = 'none';
+
+                // Define um temporizador para mostrar o contêiner novamente após 10 segundos.
+                setTimeout(() => {
+                    adContainer.style.display = 'block';
+                }, 10000); // 10000 milissegundos = 10 segundos
+            });
+        }
+    </script>
+    </body>
 </html>
