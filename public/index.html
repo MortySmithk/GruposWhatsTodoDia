@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="q5GnYgfSLz8RBSXp5gg13u_GOBloxYaSi8gSLA3QhPs" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GruposWhatsTodoDia - Os Grupos de Putaria WhatsApp Mais Procurados!</title>
     <link rel="icon" href="https://i.ibb.co/9HPTKbVV/icon-Grupos-Whats.png" type="image/png">
@@ -726,11 +725,25 @@
     
     <script>
         const adContainer = document.getElementById('ad-container');
+        let adHideTimeout = null; // Variável para guardar o ID do timeout
 
         if (adContainer) {
-            adContainer.addEventListener('click', () => {
+            adContainer.addEventListener('click', (event) => {
+                // Impede que o clique se propague para outros elementos da página,
+                // como scripts de anúncios pop-under que escutam cliques no documento todo.
+                // Isso garante que ao clicar para fechar o banner, você não ative outro anúncio sem querer.
+                event.stopPropagation();
+
+                // Esconde o container do anúncio
                 adContainer.style.display = 'none';
-                setTimeout(() => {
+
+                // Se já existir um timeout agendado (devido a cliques rápidos), ele é cancelado.
+                if (adHideTimeout) {
+                    clearTimeout(adHideTimeout);
+                }
+
+                // Agenda a reexibição do container do anúncio para depois de 10 segundos.
+                adHideTimeout = setTimeout(() => {
                     adContainer.style.display = 'block';
                 }, 10000);
             });
@@ -739,4 +752,3 @@
     
 </body>
 </html>
-
